@@ -1,0 +1,31 @@
+medical-soap-note-generator/
+├── .git/                     # Git directory (hidden)
+├── .gitignore                # Specifies intentionally untracked files
+├── data/
+│   ├── raw/                  # Original, immutable data (e.g., conversations, reports)
+│   │   └── .gitkeep          # Keeps the directory in git even if empty initially
+│   ├── processed/            # Cleaned and preprocessed data
+│   │   └── .gitkeep
+│   └── annotated/            # Data with SOAP note annotations (if you create these)
+│       └── .gitkeep
+├── notebooks/                # Jupyter notebooks for exploration, experimentation
+│   └── .gitkeep
+├── src/                      # Main source code for the project
+│   ├── __init__.py
+│   ├── data_processing.py    # Scripts for cleaning, transforming data
+│   ├── model.py                # Model definition, fine-tuning logic
+│   ├── train.py                # Script to run the training process
+│   ├── evaluate.py             # Script for model evaluation
+│   └── inference.py            # Script for generating SOAP notes with a trained model
+│   └── utils.py                # Utility functions
+├── scripts/                  # Helper scripts (e.g., data download, environment setup)
+│   └── .gitkeep
+├── models_checkpoint/        # Saved model checkpoints (use .gitignore for large files)
+│   └── .gitkeep
+├── tests/                    # Unit tests and integration tests
+│   ├── __init__.py
+│   └── test_data_processing.py # Example test file
+├── requirements.txt          # List of Python dependencies
+├── environment.yml           # (Optional) For Conda environments
+├── LICENSE                   # Your chosen license file
+└── README.md                 # Project overview, setup, usage instructions

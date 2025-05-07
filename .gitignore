@@ -172,3 +172,23 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Virtual environment
+.venv/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data and Models (as discussed)
+data/raw/*
+data/processed/*
+data/annotated/*
+!data/**/.gitkeep
+
+models_checkpoint/*
+!models_checkpoint/.gitkeep
+
+# Secrets and sensitive files
+*.env
+secrets.ini
+config.ini

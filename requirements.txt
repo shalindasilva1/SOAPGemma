@@ -3,5 +3,14 @@ pandas
 scikit-learn
 torch
 transformers
-datasets # From Hugging Face
+datasets
 nltk
+pathlib
+bitsandbytes
+peft
+transformers
+trl
+torch
+torchvision
+torchaudio
+huggingface_hub[cli]

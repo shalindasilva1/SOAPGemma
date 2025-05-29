@@ -43,54 +43,6 @@ TxGemma is a collection of open-source machine learning models designed to impro
 The OMI dataset used in this project consists of 10,000 synthetic dialogues between a patient and clinician, created using the GPT-4 dataset from NoteChat, based on PubMed Central (PMC) case reports. Accompanying these dialogues are SOAP summaries generated through GPT-4. The dataset is split into training, validation, and test sets.
 *(Source: Junxian Tang et al., "NoteChat: A Dataset of Synthetic Doctor-Patient Conversations Conditioned on Clinical Notes," arXiv)*
 
-## Project Structure
-
-medical-soap-note-generator/
-├── .git/                     # Git directory (hidden)
-├── .gitignore                # Specifies intentionally untracked files
-├── data/
-│   ├── raw/                  # Original, immutable data (e.g., conversations, reports)
-│   │   └── .gitkeep          # Keeps the directory in git even if empty initially
-│   ├── processed/            # Cleaned and preprocessed data
-│   │   └── .gitkeep
-│   └── annotated/            # Data with SOAP note annotations (if you create these)
-│       └── .gitkeep
-├── notebooks/                # Jupyter notebooks for exploration, experimentation
-│   ├── data_processing.ipynb
-│   ├── tx-gemma-demo.ipynb
-│   ├── tx-gemma-soap-note-predict.ipynb
-│   ├── tx-gemma-soap-notes.ipynb
-│   └── tx_gemma_soap_note_eval.ipynb
-├── src/                      # Main source code for the project
-│   ├── init.py
-│   ├── data_processing.py    # Scripts for cleaning, transforming data
-│   ├── model.py              # Model definition, fine-tuning logic, and single inference
-│   ├── inference.py          # Script for generating SOAP notes (callable)
-│   ├── inference_batch.py    # Script for batch SOAP note generation
-│   ├── train.py              # Script to run the training process (if separated from notebook)
-│   ├── evaluate.py           # Script for model evaluation (if separated from notebook)
-│   └── utils.py              # Utility functions
-│   └── test_data/            # Sample data for testing inference
-│       └── d1.txt
-├── models_checkpoint/        # Saved model checkpoints
-│   └── SOAPgemma_v1/         # Fine-tuned PEFT adapter
-│       ├── README.md
-│       ├── adapter_config.json
-│       ├── adapter_model.safetensors
-│       ├── special_tokens_map.json
-│       ├── tokenizer.json
-│       ├── tokenizer_config.json
-│       └── tokenizer.model
-│   └── .gitkeep
-├── tests/                    # Unit tests and integration tests
-│   ├── init.py
-│   └── test_data_processing.py # Example test file
-├── requirements.txt          # List of Python dependencies
-├── environment.yml           # (Optional) For Conda environments
-├── LICENSE                   # Your chosen license file
-└── README.md                 # Project overview, setup, usage instructions
-
-
 ## Model Details
 * **Base Model:** `google/txgemma-2b-predict`
 * **Fine-tuned Adapter:** `SOAPgemma_v1` (LoRA-based PEFT adapter)

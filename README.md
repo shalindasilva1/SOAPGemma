@@ -1,6 +1,4 @@
-# SOAPGemma - Medical SOAP Note Generator
-
-![SOAPGemma Banner](../DOCS/img.png)
+![SOAPGemma Banner](DOCS/img.png)
 
 ## Table of Contents
 1.  [Introduction](#introduction)
